@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
       u.name = auth['info']['name']
     end
     session[:user_id] = @user.id
+    redirect_to root_path
   end
 
   def auth
