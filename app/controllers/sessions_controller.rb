@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   def create
   end
 
-  def auth 
+  def auth
+    request.env['omniauth.auth']
   end
 end
